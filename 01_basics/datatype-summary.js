@@ -41,4 +41,4 @@ You do not need to explicitly declare data types when writing code
 
 
 // Documentation: https://developer.mozilla.org/en-US/
-// ECMA documention: https://tc39.es/ecma262/
+// ECMA documention: https://262.ecma-international.org/
