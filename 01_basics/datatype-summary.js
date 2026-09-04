@@ -3,15 +3,34 @@
 
 const score = false;
 const string = "Loop"
-let BigInt = 345678909876543456789;
+let Int = 345678909876543456789;
+let BigInt = 345678909876543456789n;
+const temp = null;
+let isLoggedIn = false;
+let notdefinedvariable;
 
-console.log(typeof BigInt);
+console.log(typeof BigInt, typeof Int);
+console.log(typeof notdefinedvariable);
+console.log(typeof temp, "\n");
+
 
 // Refrence (Non Premitive)
 // Array, Objects, Functions
 
+const animeHeros = ["Naruto", "Sasuke", "Jiraya", "Haruken"];
+console.log(typeof animeHeros);
 
+let varObj = {
+    name: "Sachin",
+    age: 29
+}
+console.log(typeof varObj);
 
+const myFun = function(){
+    console.log("Launde....!!");
+    
+}
+console.log(typeof myFun);
 /*
 Note: JavaScript is a dynamically typed language.
 
