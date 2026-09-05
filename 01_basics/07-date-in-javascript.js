@@ -32,7 +32,6 @@ console.log(myDate.getDay()); // Output: 6 Fri Jan 23 2026 00:00:00 GMT+0000 (Co
 
 let myNewDate = myDate.toLocaleString('default', {
     weekday: "long",
-    timeZoneName: "long",
-    timeZone: 
+    timeZoneName: "long"
 })
 console.log(myNewDate);
