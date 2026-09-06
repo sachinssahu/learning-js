@@ -60,3 +60,38 @@ console.log(Object.keys(authUser).length); // length of Object is always 1, so c
 
 console.log(authUser.hasOwnProperty("isLoggedIn")); // give answer in boolean 
 console.log(authUser.hasOwnProperty("isLog")); // false when not found
+
+
+// de-structure objects
+
+const course = {
+    courseName: "SQL in Hindi",
+    price: 1299,
+    courseInstructor: "Sachin"
+}
+
+// course.courseInstructor
+
+const {courseInstructor} = course // const{propertyKey} = Object
+console.log(courseInstructor);
+
+const {courseInstructor: teacher} = course // assign a new name to property if required or name too long
+console.log(teacher);
+
+// APIs = Application Programming Interface
+// Json holds keys and values both in string | JSON JavaScript Object Notation
+
+// {
+//     "courseName": "SQL in Hindi",
+//     "price": 1299,
+//     "courseInstructor": "Sachin"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
+// https://randomuser.me/api/
+// give a long JSON with is not easy to study so always try to format that into TREE and understand its structure to loop or access data
