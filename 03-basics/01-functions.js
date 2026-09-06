@@ -81,3 +81,42 @@ function loginMessage4 (username = "sahu") {
 
 console.log(loginMessage4());
 console.log(loginMessage4("Sachinn"));
+
+
+// +++++++++++++++++++++++++++ More on Functions +++++++++++++++++++++++++++
+
+function calculateCartPrice (...num1) {
+    return num1
+}
+console.log(calculateCartPrice(100, 200, 300));
+
+// ... is spread operator as well as rest operator
+
+function calculateCartPrice1 (val1, val2, ...num1) {
+    return num1
+}
+console.log(calculateCartPrice1 (100, 200, 300, 400, 500));
+
+const user = {
+    username: "Sachin",
+    age: 29
+}
+
+function handleObject (anyObject) {
+    console.log(`Username is ${anyObject.username} and age is ${anyObject.price}`)
+}
+
+handleObject(user)
+handleObject({
+    username: "Sachin",
+    price: 399
+})
+
+const  newArray = [1,2,3,4,5]
+
+function returnSecondValue (getArray) {
+    return getArray[1]
+}
+
+console.log(returnSecondValue(newArray));
+console.log(returnSecondValue([1,22,3,4,5]));
