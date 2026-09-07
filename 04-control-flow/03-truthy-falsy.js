@@ -49,7 +49,7 @@ console.log(false == ''); //true
 console.log(0 == ''); //true
 
 
-// Nullish Coalescing Operator ??
+// Nullish Coalescing Operator ??: null, undefined
 
 let val1
 val1 = 5 ?? 10 // 5
