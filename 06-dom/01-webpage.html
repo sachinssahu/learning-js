@@ -1,20 +1,104 @@
-/* The Document Object Model (DOM) is a programming interface for web documents. 
+<!-- The Document Object Model (DOM) is a programming interface for web documents. 
 When a browser loads an HTML page, it parses the code and creates an in-memory, hierarchical tree of objects 
 that represents the structure of the document */
 
 /* JavaScript uses the DOM to dynamically read, change, add, or delete HTML elements, 
 attributes, and styles without requiring a full page reload. */
-
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 id="title" class="heading">DOM Learning on VSCode</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM Learning on VSCode
+            <span style = "display: none;">test text</span>
+        </h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+       
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolorem?</p>
     </div>
 </body>
 </html>
+
+
+
+<!--- Practice
+
+title.style.padding = "15px";
+title.style.borderRadius = "15px";
+
+title.textContent //Gives hidden text as well
+'DOM Learning on VSCode\n            test text\n'
+
+title.innerHTML //Supports inner html tags as well
+'DOM Learning on VSCode\n            <span style="display: none;">test text</span>\n        '
+
+title.innerText //Gives visible context
+'DOM Learning on VSCode'
+
+document.getElementsByClassName('heading') //Fetch elements by className
+HTMLCollection [h1#title.heading, title: h1#title.heading]
+
+document.querySelector('h2') //gives first h2 found in html
+<h2>​Lorem, ipsum dolor.​</h2>​
+
+document.querySelectorAll('h2') //gives all h2 found in html
+NodeList(3) [h2, h2, h2]0: h21: h22: h2length: 3[[Prototype]]: NodeList
+
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+document.querySelector('.heading')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+document.querySelector('input[type="password"]') //we can check input fields as well
+<input type=​"password" name id>​
+
+const myul = document.querySelector('ul')
+undefined
+
+myul.querySelector('li')
+<li style=​"background-color:​ green;​ padding:​ 5px;​">​…​</li>​
+
+myul.querySelector('li').style.backgroundColor = "green"
+'green'
+
+myul.querySelector('li').style.padding = "15px"
+'15px'
+
+myul.querySelector('li').style.padding = "5px"
+'5px'
+
+myul.querySelector('li').innerText // check
+'one'
+
+myul.querySelector('li').innerText = "First Inner Text" // assign new values
+'First Inner Text'
+
+const templi = document.querySelectorAll('li')
+undefined
+
+templi
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+
+templi.style.color = 'green' // can't style a nodelist
+
+-->
