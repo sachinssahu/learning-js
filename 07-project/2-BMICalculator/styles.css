@@ -1,7 +1,7 @@
 .container {
   width: 575px;
   height: 800px;
-  background-color: #7952b3;
+  background-color: lightblue;
   padding-left: 30px;
 }
 #height, #weight {
@@ -26,4 +26,26 @@ button {
   font-size: 30px;
   margin-top: 20px;
   color: white;
+}
+
+/* Navigation Bar Styling */
+nav {
+  background-color: #e0e0e0;
+  padding: 12px 20px;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  background-color: #d1d1d1;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #adadad;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background-color: #c4c4c4;
 }
