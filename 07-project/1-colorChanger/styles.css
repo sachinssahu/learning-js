@@ -66,6 +66,10 @@ nav a:hover {
   background: yellow;
 }
 
+#purple {
+  background: purple;
+}
+
 h1 {
   margin-bottom: 30px;
 }
