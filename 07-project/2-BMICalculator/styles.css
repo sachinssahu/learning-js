@@ -1,0 +1,29 @@
+.container {
+  width: 575px;
+  height: 800px;
+  background-color: #7952b3;
+  padding-left: 30px;
+}
+#height, #weight {
+  width: 150px;
+  height: 25px;
+  margin-top: 20px;
+}
+#weight-guide {
+  margin-left: 50px;
+  margin-top: 25px;
+}
+button {
+  width: 150px;
+  height: 35px;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+}
+#results {
+  font-size: 30px;
+  margin-top: 20px;
+  color: white;
+}
