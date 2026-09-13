@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <!-- 
+    Ajax and XMLHttpRequest MDN
+    https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+    -->
+    <ul id="typesOfReadyState">
+      <li>0 UNSENT Client has been created. open() not called yet.</li>
+      <li>1 OPENED open() has been called.</li>
+      <li>
+        2 HEADERS_RECEIVED send() has been called, and headers and status are
+        available.
+      </li>
+      <li>3 LOADING Downloading; responseText holds partial data.</li>
+      <li>4 DONE The operation is complete.</li>
+    </ul>
+    <h4>
+        <body>
+            Click to show data fetched from API
+        </body>
+         <button id="showDataFromAPI">Click</button>
+    </h2>
+  </body>
+  <script>
+    const reqURL = "https://api.github.com/users/sachinssahu";
+    const xhr = new XMLHttpRequest();
+    // console.log(xhr.readyState);
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      //check api xmlHttpRequest's state on each step
+
+      if (xhr.readyState === 4) {
+        // when api state is 4 or DONE then do below
+        let data = this.responseText;
+        // this is used to refer to current xhr object
+        // response are generally carries dataType string
+        console.log(typeof data);
+        data = JSON.parse(data);
+        // convert the same into JSON OBJECT. Why JSON because it is Easy to Read and Use. 
+        // Also, JSON (JavaScript Object Notation) is the global standard for web APIs because it is lightweight, fast, and understood by almost every programming language and browser.
+        console.log(typeof data);
+        console.log(data.name);
+        return data.name;
+        // now we can access object properties with dot operator
+      }
+    };
+    xhr.open("GET", reqURL);
+    // console.log(xhr.readyState);
+    xhr.send();
+    // console.log(xhr.readyState);
+
+    // const showDataFromAPI = document.querySelector('#showDataFromAPI').addEventListener('click', function () {
+    //     let card = document.createElement('div')
+    //     card.innerHTML = data.name;
+    //     showDataFromAPI.appendChild(div)
+    // })
+
+  </script>
+</html>
