@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #212121;
+  color: #fff;
+}
+
+/* Navigation Bar Styling */
+nav {
+  background-color: #e0e0e0;
+  padding: 12px 20px;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  background-color: #d1d1d1;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #adadad;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background-color: #c4c4c4;
+}
+
+.center {
+  text-align: center;
+  margin-top: 150px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #111;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #111;
+}

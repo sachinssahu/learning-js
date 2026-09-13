@@ -1,0 +1,71 @@
+/* Reset basic margins and set font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #212121;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #e0e0e0;
+  padding: 12px 20px;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  background-color: #d1d1d1;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #adadad;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background-color: #c4c4c4;
+}
+
+/* Main Content area */
+main {
+  padding: 25px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+/* Projects Container */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 800px;
+}
+
+/* Project Link Buttons */
+.project-link {
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  padding: 14px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.project-link:hover {
+  background-color: #f0f0f0;
+}
