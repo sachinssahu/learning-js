@@ -108,7 +108,7 @@ async function consumePromise05() {
 // or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "ERROR: Promise 5 rejcted".
 consumePromise05();
 
-// get response from real API
+// get response from real API using fetch method
 async function getAllUsers() {
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/users');
