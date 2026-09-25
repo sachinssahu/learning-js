@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React",
+            this.server = "http://localhost:300"
+
+            // =========================================================================
+            // LEARNING NOTE: Why .bind(this) is used here
+            // -------------------------------------------------------------------------
+            // Problem: When passing 'this.handleClick' as a callback to addEventListener,
+            // the browser invokes it later in a different execution context. Without 
+            // binding, 'this' inside handleClick points to the DOM button element 
+            // (or becomes undefined in strict mode), losing access to class properties.
+            // Solution: .bind(this) permanently locks the 'this' context to the 
+            // current instance of the React class so it can access this.server safely.
+            // =========================================================================
+            
+            document
+            .querySelector('button')
+            .addEventListener('click', this.handleClick.bind(this))
+        }
+        handleClick(){
+            console.log("button clicked")
+            console.log(this.server);
+            
+        }
+    }
+
+    const app = new  React()
+</script>
+</html>
